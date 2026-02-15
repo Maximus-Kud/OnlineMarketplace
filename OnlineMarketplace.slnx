@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OnlineMarketplace.Core/OnlineMarketplace.Core.csproj" />
+  <Project Path="OnlineMarketplace.Test/OnlineMarketplace.Test.csproj" />
+</Solution>

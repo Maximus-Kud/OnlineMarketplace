@@ -1,0 +1,215 @@
+[
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "AddNewProduct",
+    "RelativePath": "Admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createProductData",
+        "Type": "OnlineMarketplace.DTO.CreateProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "ChangeAccountBalance",
+    "RelativePath": "Admin/changeAccountBalance",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changeBalanceData",
+        "Type": "OnlineMarketplace.DTO.ChangeBalanceDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "ChangeOrderStatus",
+    "RelativePath": "Admin/changeOrderStatus",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changeOrderStatusData",
+        "Type": "OnlineMarketplace.DTO.ChangeOrderStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "DeleteProduct",
+    "RelativePath": "Admin/deleteProduct/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "GetOrdersInShoppingCart",
+    "RelativePath": "Admin/getOrdersInShoppingCart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "GetOrdersPurchased",
+    "RelativePath": "Admin/getOrdersPurchased",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "GetAllProducts",
+    "RelativePath": "Admin/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "UpdateProduct",
+    "RelativePath": "Admin/updateProduct/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateProductData",
+        "Type": "OnlineMarketplace.DTO.UpdateProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AdminController",
+    "Method": "GetAllUsers",
+    "RelativePath": "Admin/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "Authentication/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginData",
+        "Type": "OnlineMarketplace.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "Authentication/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registrationData",
+        "Type": "OnlineMarketplace.DTO.RegistrationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.AuthenticationController",
+    "Method": "Test",
+    "RelativePath": "Authentication/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.MarketplaceController",
+    "Method": "GetAvailableProducts",
+    "RelativePath": "Marketplace",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.MarketplaceController",
+    "Method": "GetAccountInfo",
+    "RelativePath": "Marketplace/getAccountInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.MarketplaceController",
+    "Method": "GetLogs",
+    "RelativePath": "Marketplace/getLogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OnlineMarketplace.Controllers.MarketplaceController",
+    "Method": "OrderProduct",
+    "RelativePath": "Marketplace/order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderData",
+        "Type": "OnlineMarketplace.DTO.OrderProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
