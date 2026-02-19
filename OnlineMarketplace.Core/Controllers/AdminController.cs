@@ -239,12 +239,12 @@ namespace OnlineMarketplace.Controllers
                 var order = await _context.OrderedProducts.FindAsync(changeOrderStatusData.OrderId);
 
                 if (order == null) return NotFound($"Order ID: {changeOrderStatusData.OrderId} was not found");
-                if (order.Status == Statuses.Purchased) return BadRequest("Order was already purchased");
-                if (order.Status == Statuses.Cancelled) return BadRequest("Cancelled order cannot be changed");
-                if (order.Status == changeOrderStatusData.Status) return BadRequest($"Order ID: {order.Id} already had this status: {order.Status}");
+                if (order.Status.ToLower() == Statuses.Purchased.ToLower()) return BadRequest("Order was already purchased");
+                if (order.Status.ToLower() == Statuses.Cancelled.ToLower()) return BadRequest("Cancelled order cannot be changed");
+                if (order.Status.ToLower() == changeOrderStatusData.Status.ToLower()) return BadRequest($"Order ID: {order.Id} already had this status: {order.Status}");
 
 
-                if (changeOrderStatusData.Status == Statuses.Purchased)
+                if (changeOrderStatusData.Status.ToLower() == Statuses.Purchased.ToLower())
                 {
                     var user = await _context.Users.FindAsync(order.UserId);
                     if (user == null) return NotFound($"User of the order {order.Id} was not found");

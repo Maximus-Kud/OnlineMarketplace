@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="OnlineMarketplace.Core/OnlineMarketplace.Core.csproj" />
   <Project Path="OnlineMarketplace.Test/OnlineMarketplace.Test.csproj" />
+  <Project Path="Onlinemarketplace.Web/Onlinemarketplace.Web.csproj" Id="359f79ec-046e-48f4-80c3-a5a5b283bc25" />
 </Solution>

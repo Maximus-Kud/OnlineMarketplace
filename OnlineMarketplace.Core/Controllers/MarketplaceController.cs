@@ -58,6 +58,8 @@ namespace OnlineMarketplace.Controllers
         [HttpPost("order")]
         public async Task<ActionResult> OrderProduct([FromBody] OrderProductDTO orderData)
         {
+            if (orderData.ProductsId == null || !orderData.ProductsId.Any()) return BadRequest("Product list can not be empty");
+
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId == null) return NotFound("User ID was not found");
 

@@ -58,7 +58,7 @@ namespace OnlineMarketplace.Controllers
             {
                 Date = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture),
                 LogLevel = LogFile.LogLevels.INFO,
-                User = await _userManager.GetUserAsync(User) ?? new ApplicationUser { UserName = registrationData.Username, Email = registrationData.Email },
+                User = user ?? new ApplicationUser { UserName = registrationData.Username, Email = registrationData.Email },
                 Role = roles.FirstOrDefault() ?? RoleNames.Customer,
                 Description = "Created POST-Request to register"
             });
@@ -117,7 +117,7 @@ namespace OnlineMarketplace.Controllers
             {
                 Date = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture),
                 LogLevel = LogFile.LogLevels.INFO,
-                User = await _userManager.GetUserAsync(User) ?? new ApplicationUser { Id = user.Id, UserName = user.UserName, Email = user.Email },
+                User = user ?? new ApplicationUser { Id = user.Id, UserName = user.UserName, Email = user.Email },
                 Role = roles.FirstOrDefault() ?? RoleNames.Customer,
                 Description = "Created POST-Request to log and get JWT token"
             });

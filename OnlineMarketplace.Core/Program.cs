@@ -51,6 +51,16 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
+builder.Services.AddCors(builder =>
+{
+    builder.AddPolicy("AllowAll", options =>
+    {
+        options.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddControllers()
     .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -86,6 +96,8 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddSingleton<LogService>();
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 
 using (var scope = app.Services.CreateScope())

@@ -6,6 +6,6 @@
 
         public const string Purchased = "Purchased";
         
-        public const string Cancelled = "Cancel";
+        public const string Cancelled = "Cancelled";
     }
 }

@@ -1,0 +1,487 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcfdff;
+
+    box-sizing: border-box;
+
+    font-size: clamp(2px, 1.2vw, 18px);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.point {
+    cursor: pointer;
+}
+
+.text {
+    color: #04507f;
+}
+
+.borderRadius {
+    border-radius: 10px;
+}
+
+
+
+#title {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    background-color: #b2bfcf;
+    width: 100%;
+
+    font-weight: bold;
+    font-size: 4rem;
+
+    height: 6rem;
+
+    text-align: center;
+}
+
+#menuIcon {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 2.5rem;
+    height: 2rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.4rem;
+    margin: 0.2rem;
+
+    background-color: #04507f;
+}
+
+#chooseMenu {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+
+    width: 15rem;
+    height: calc(100vh - 6rem);
+
+    background-color: #04507f;
+
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+
+    z-index: 1000;
+
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#chooseMenu.active {
+    transform: translateX(0);
+}
+
+#currentMenu {
+    width: calc(100vw - 2rem);
+    height: 3rem;
+    margin-top: 7.5rem;
+
+    background-color: #b2bfcf;
+
+    transition: width 0.4s ease;
+
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+#currentMethods {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.method-item {
+    background: #d0e2ff;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+
+    font-size: 1rem;
+    color: #2c3e50;
+
+    transition: all 0.2s ease;
+}
+
+.method-item:hover {
+    background: #dfe8f5;
+    transform: translateX(5px);
+}
+
+.method-item.active {
+    background: #4a90e2;
+    color: white;
+}
+
+#content.shifted {
+  transform: translateX(15rem);
+}
+
+#currentMenu.shifted {
+    transform: translateX(15rem);
+
+    transition: transform 0.4s ease;
+}
+
+
+
+
+#content {
+    margin-top: 6rem;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+
+    transition: transform 0.4s ease;
+}
+
+#allProducts {
+    flex: 1;
+}
+
+
+
+
+
+/* ------------------------- Register ------------------------- */
+#registerResult {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+
+    font-weight: bold;
+    margin: 1rem;
+    text-align: center;
+
+    width: 70%;
+}
+
+.register-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.register-error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+
+
+
+
+/* ------------------------- Login ------------------------- */
+#loginInfo {
+    width: 420px;
+
+    background-color: #b2bfcf;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    font-size: 1.1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#loginInfo h2 {
+    text-align: center;
+}
+
+.login-success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-error {
+    color: darkred;
+    font-weight: bold;
+    text-align: center;
+}
+
+.token-box {
+    background: #eef2f7;
+
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+
+    word-break: break-all;
+}
+
+
+
+
+
+/* ------------------------- Get All Products ------------------------- */
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.product {
+    background-color: #b2bfcf;
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 120px;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+
+
+
+/* ------------------------- Get Account Info ------------------------- */
+#accountInfo {
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+
+    background-color: #b2bfcf;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    font-size: 1.1rem;
+}
+
+#accountInfo h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.account-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0.3rem 0;
+    border-bottom: 1px solid gray;
+}
+
+
+
+
+
+/* ------------------------- Get Products Admin ------------------------- */
+#adminProducts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.admin-product {
+    background-color: #b2bfcf;
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.admin-product img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.admin-product .field {
+    font-weight: bold;
+}
+
+
+
+
+
+/* ------------------------- Get Users Admin ------------------------- */
+#adminUsers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.admin-user {
+    background-color: #b2bfcf;
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    text-align: left;
+    font-size: 0.95rem;
+    
+    word-break: break-all; 
+}
+
+.admin-user .field {
+    font-weight: bold;
+}
+
+
+
+
+
+/* ------------------------- Get Orders ------------------------- */
+#adminOrders {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.admin-order-card {
+    background-color: #b2bfcf;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.order-header {
+    font-size: 0.8rem;
+    color: black;
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.5rem;
+    word-break: break-all;
+}
+
+.order-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.price-tag {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.products-list {
+    font-family: monospace;
+    font-size: 0.9rem;
+    background: lightgray;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.status-badge {
+    align-self: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.status-cart {
+    background-color: #e2e3e5;
+    color: blue;
+}
+
+.status-purchased {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-default {
+    background-color: #eee;
+}
+
+
+
+
+
+/* ------------------------- Get Logs ------------------------- */
+#logsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+
+    width: 80%;
+}
+
+.log {
+    background: #b2bfcf;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.log-time {
+    width: 200px;
+}
+
+.log-status {
+    font-weight: bold;
+    width: 80px;
+}
+
+.log-text {
+    flex: 1;
+}
